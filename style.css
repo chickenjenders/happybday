@@ -1,7 +1,7 @@
 body {
   font-family: "Andale Mono", monospace; /* Changed font to Andale Mono */
-  /* Very light, desaturated pastel blue-green background */
-  background: linear-gradient(135deg, #eaf7f7, #d9f2f7);
+  /* Clean gradient with greens, blues, and creams - boyish birthday vibes */
+  background: linear-gradient(135deg, #e8f5e8, #e0f2f7, #f8f8f6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  color: #2a3031; /* Dark gray/black for default text, from LovePawsona --6-color */
+  color: #2a3031; /* Dark gray for text */
 }
 .container {
   max-width: 400px; /* Slightly wider for better phone experience */
@@ -23,9 +23,9 @@ body {
   min-height: 100vh; /* Full viewport height for better mobile experience */
 }
 .btn {
-  /* Soft, clean pastel blue for buttons, similar to LovePawsona --4-color */
-  background-color: #d8f4f6;
-  color: #2a3031; /* Dark gray/black text, from LovePawsona --6-color */
+  /* Fresh sage green for primary buttons - calm and boyish */
+  background-color: #c8e6c9;
+  color: #2a3031; /* Dark gray text */
   padding: 12px 28px;
   border-radius: 50px; /* Very rounded, similar to reference buttons */
   font-weight: 600;
@@ -39,18 +39,18 @@ body {
   gap: 8px;
 }
 .btn:hover {
-  /* Slightly darker pastel blue on hover, similar to LovePawsona --5-color */
-  background-color: #ade1eb;
+  /* Slightly deeper sage green on hover */
+  background-color: #a5d6a7;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly more prominent hover shadow */
   transform: translateY(-1px); /* Subtle hover effect */
 }
 .option-btn {
-  /* Very light, almost white blue/green for options */
-  background-color: #f4fcfc;
-  color: #2a3031; /* Dark gray/black text */
+  /* Soft cream/off-white for options - clean and neutral */
+  background-color: #f8f8f6;
+  color: #2a3031; /* Dark gray text */
   padding: 15px 25px;
   border-radius: 50px; /* Very rounded to match message style in reference */
-  border: none; /* No border for a cleaner, flatter look like LovePawsona buttons */
+  border: none; /* No border for a cleaner, flatter look */
   font-weight: 500;
   text-align: left;
   transition: all 0.2s ease;
@@ -60,20 +60,20 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Simpler shadow */
 }
 .option-btn:hover {
-  /* Lighter pastel blue hover for options */
-  background-color: #e0f2f7;
+  /* Light blue-grey on hover */
+  background-color: #e8f4f8;
   transform: translateY(-1px);
 }
 .option-btn.selected {
-  /* A slightly more vibrant but still pastel blue-green for selected option */
-  background-color: #add8e6;
+  /* Soft blue for selected option - birthday celebration feel */
+  background-color: #b3e5fc;
   border: none; /* Keep consistent no border */
-  box-shadow: 0 3px 8px rgba(173, 216, 230, 0.4); /* Shadow to indicate selection */
+  box-shadow: 0 3px 8px rgba(179, 229, 252, 0.4); /* Shadow to indicate selection */
   font-weight: 600;
 }
 .progress-bar-container {
   width: 100%;
-  background-color: #e0e0e0;
+  background-color: #f0f0f0; /* Light grey background */
   border-radius: 10px;
   height: 10px;
   margin-top: 20px;
@@ -82,16 +82,16 @@ body {
 .progress-bar {
   height: 100%;
   width: 0%;
-  /* A clear pastel blue for progress bar */
-  background-color: #ade1eb; /* Matches LovePawsona --5-color */
+  /* Calming blue-green for progress - birthday energy */
+  background-color: #81c784;
   border-radius: 10px;
   transition: width 0.3s ease-in-out;
 }
 /* Loading spinner */
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
-  /* Matching pastel blue for spinner */
-  border-left-color: #ade1eb;
+  /* Soft blue for spinner - calm and friendly */
+  border-left-color: #64b5f6;
   border-radius: 50%;
   width: 40px;
   height: 40px;
