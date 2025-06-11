@@ -11,6 +11,10 @@ body {
   box-sizing: border-box;
   color: #2a3031; /* Dark gray for text */
 }
+
+.result-img {
+  width: 90%;
+}
 .container {
   max-width: 400px; /* Slightly wider for better phone experience */
   width: 100%;
@@ -40,7 +44,7 @@ body {
 }
 .btn:hover {
   /* Slightly deeper sage green on hover */
-  background-color: #a5d6a7;
+  background-color: #53c557;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly more prominent hover shadow */
   transform: translateY(-1px); /* Subtle hover effect */
 }
@@ -61,7 +65,7 @@ body {
 }
 .option-btn:hover {
   /* Light blue-grey on hover */
-  background-color: #e8f4f8;
+  background-color: #6dc1dc;
   transform: translateY(-1px);
 }
 .option-btn.selected {
@@ -104,6 +108,62 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Birthday card styles */
+.birthday-card {
+  margin: 32px auto 0 auto;
+  padding: 22px 18px 18px 18px;
+  max-width: 340px;
+  background: #fff7e6;
+  color: #7b4a1e;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, "Andale Mono", monospace;
+  font-size: 1.08rem;
+  border-radius: 18px;
+  border: 3px dashed #ff4747;
+  box-shadow: 0 4px 18px rgba(255, 179, 71, 0.1);
+  position: relative;
+  text-align: center;
+  /* Add a scalloped edge using a repeating linear-gradient background */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fff7e6 0px,
+    #fff7e6 12px,
+    #ff4747 12px,
+    #ff4747 16px
+  );
+  background-size: 100% 16px;
+  background-repeat: repeat-x;
+  background-position: top;
+  /* Optional: add a subtle shadow for depth */
+}
+
+.birthday-card::before,
+.birthday-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 16px;
+  background: repeating-linear-gradient(
+    to right,
+    #ff4747 0px,
+    #ff4747 8px,
+    #fff7e6 8px,
+    #fff7e6 16px
+  );
+  z-index: 1;
+}
+.birthday-card::before {
+  top: -16px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.birthday-card::after {
+  bottom: -16px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
 }
 
 /* Responsive adjustments */
