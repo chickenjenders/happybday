@@ -14,6 +14,7 @@ body {
 
 .result-img {
   width: 90%;
+  max-width: 800px;
 }
 .container {
   max-width: 400px; /* Slightly wider for better phone experience */
