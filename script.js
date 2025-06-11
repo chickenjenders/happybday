@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
       options: [
         { text: "Systematically debugging complex code until the solution clicks perfectly.", points: { 'Coder God': 3 } },
         { text: "Escaping into the great outdoors for a refreshing trek.", points: { 'Hiker/Adventurist': 2 } },
-        { text: "Doing nothing at home.", points: { 'Cat Dad': 3, 'Lazy': 2 } },
-        { text: "Indulging in a very specific, perhaps obscure, hobby or interest that's uniquely *you*.", points: { 'Holiday Edition': 3 } }
+        { text: "Doing nothing at home or playing video games.", points: { 'Cat Dad': 2, 'Lazy': 3 } },
+        { text: "Indulging in a very specific, perhaps obscure, hobby or interest that's uniquely *you*.", points: { 'Holiday Edition': 3, 'Cat Dad': 1 } }
       ]
     },
     {
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
       question: "Which meal best describes your current food mood?",
       options: [
         { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 2, 'Bald': 1 } },
-        { text: "Donkatsu", points: { 'Lazy': 2, 'Cat Dad': 2 } },
-        { text: "McDonalds", points: { 'Coder God': 2 } },
-        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Holiday Edition': 2 } }
+        { text: "Donkatsu", points: { 'Cat Dad': 2 } },
+        { text: "McDonalds", points: { 'Holiday Edition': 2, 'Lazy': 2, } },
+        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Coder God': 2 } }
       ]
     },
     {
