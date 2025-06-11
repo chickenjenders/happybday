@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       question: "What's your ideal way to spend a Saturday morning?",
       options: [
-        { text: "Diving deep into a new coding project or troubleshooting a tricky bug.", points: { 'Coder God': 3 } },
+        { text: "Diving deep into a new coding project or troubleshooting a tricky bug.", points: { 'Coder God': 3, 'Bald': 3 } },
         { text: "Hitting the trails for a long hike, exploring new paths in nature.", points: { 'Hiker/Adventurist': 3 } },
         { text: "Sleeping in, cuddling with the cat, or playing a video game.", points: { 'Lazy': 3, 'Cat Dad': 2 } },
         { text: "Spending the day with my beautiful wife, taking a walk and chasing ducks.", points: { 'Bird Watcher': 3, 'Holiday Edition': 2 } }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       question: "When you think about your wife, what do you think is your most redeeming quality?",
       options: [
         { text: "Encouraging adventures and exercise together.", points: { 'Hiker/Adventurist': 2 } },
-        { text: "Planning dates like board game cafes and walks in the park.", points: { 'Baby': 3 } },
+        { text: "Planning dates like board game cafes and walks in the park.", points: { 'Baby': 3, 'Holiday Edition': 1 } },
         { text: "Being able to do anything together, even if its rotting at home.", points: { 'Lazy': 2, 'Cat Dad': 3 } },
         { text: "The amount of times I’ve helped her with her projects for school.", points: { 'Coder God': 2 } }
       ]
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 2, 'Bald': 1 } },
         { text: "Donkatsu", points: { 'Lazy': 3, 'Cat Dad': 2 } },
         { text: "McDonalds", points: { 'Coder God': 2 } },
-        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3 } }
+        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Holiday Edition': 1 } }
       ]
     },
     {
