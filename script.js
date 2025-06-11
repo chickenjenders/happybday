@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "The Imitation Game", points: { 'Coder God': 3 } },
         { text: "Nature documentary", points: { 'Bird Watcher': 2, 'Hiker/Adventurist': 1 } },
         { text: "Megamind", points: { 'Lazy': 3, 'Cat Dad': 1 } },
-        { text: "살인의 추억 (Memories of Murder)", points: { 'Holiday Edition': 3 } }
+        { text: "Memoir of a Murderer (살인자의 기억법)", points: { 'Holiday Edition': 3 } }
       ]
     },
     {
