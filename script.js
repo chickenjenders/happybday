@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 2, 'Bald': 1 } },
         { text: "Donkatsu", points: { 'Lazy': 3, 'Cat Dad': 2 } },
         { text: "McDonalds", points: { 'Coder God': 2 } },
-        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Holiday Edition': 1 } }
+        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Holiday Edition': 2 } }
       ]
     },
     {
@@ -101,8 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Tie-breaker priority (order matters for ties)
   const tieBreakerOrder = [
-    'Coder God', 'Hiker/Adventurist', 'Lazy', 'Cat Dad',
-    'Holiday Edition', 'Bird Watcher', 'Bald', 'Baby'
+    'Holiday Edition', 'Coder God', 'Hiker/Adventurist', 'Lazy', 'Cat Dad', 'Bird Watcher', 'Bald', 'Baby'
   ];
 
   // Placeholder for your personalized birthday message
