@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Hiker/Adventurist': 'Okaaay, he loves nature or whatever! You enjoy discovering new things, seeing pretty places, and not sitting still!',
     'Lazy': 'While a rare sight, the Lazy Sim Ho can occassionally be caught doing absolutely nothing. You enjoy the stressless activity of not having anything to do, and I respect that. It\'s okay to just chill sometimes.',
     'Cat Dad': 'A cat lover who is also loved by cats. You love those dumb little rats and find your real call to nurture by being a cat parent. No one is surprised to see a little kitty by your side at any given time.',
-    'Rare Edition': 'You\'re the rare, limited-edition Sim Ho, full of unique quirks and endearing eccentricities. Congratulations, you have unlocked the secret rare so keep being your unique little self',
+    'Holiday Edition': 'You\'re the rare, limited-edition Sim Ho, full of unique quirks and endearing eccentricities. Congratulations, you have unlocked the secret rare so keep being your unique little self',
     'Bird Watcher': 'No one knows why you like these things, but you sure do. You move without thought and will probably get attacked by a goose one day. We can\'t fault you for a silly quirk, or the even sillier pictures you take',
     'Bald': 'You\'re in a rough era, and that\'s okay! It may seem like nothing\'s going for you right now, but it will change! Your hair doesn\'t loook THAT bad, I swear!',
     'Baby': 'A baby Sim Ho is a sweet and naive Sim Ho. You probably have a lot to figure out, or are like under the age of 22. Either way, you are a huge cutie!!!'
