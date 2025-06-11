@@ -16,28 +16,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const retakeQuizBtn = document.getElementById('retake-quiz-btn');
 
   let currentQuestionIndex = 0;
-  let scores = {}; // To store points for each Sim Ho type
+  let scores = {};
 
-  // Define all Sim Ho archetypes and their full descriptions
+  // --- Sim Ho Archetypes ---
   const simHoArchetypes = {
     'Coder God': 'You possess a divine ability to wrangle code, debugging with the precision of a surgeon and optimizing like a deity. Your mind is a beautifully organized circuit board, always seeking the most elegant solution. It is still undetermined if you are in fact AI.',
     'Hiker/Adventurist': 'Okaaay, he loves nature or whatever! You enjoy discovering new things, seeing pretty places, and not sitting still!',
     'Lazy': 'While a rare sight, the Lazy Sim Ho can occassionally be caught doing absolutely nothing. You enjoy the stressless activity of not having anything to do, and I respect that. It\'s okay to just chill sometimes.',
     'Cat Dad': 'A cat lover who is also loved by cats. You love those dumb little rats and find your real call to nurture by being a cat parent. No one is surprised to see a little kitty by your side at any given time.',
-    'Holiday Edition': 'You\'re the rare, limited-edition Sim Ho, full of unique quirks and endearing eccentricities. Congratulations, you have unlocked the secret rare so keep being your unique little self',
+    'Secret Rare': 'You\'re the rare, limited-edition Sim Ho, full of unique quirks and endearing eccentricities. Congratulations, you have unlocked the secret rare so keep being your unique little self',
     'Bird Watcher': 'No one knows why you like these things, but you sure do. You move without thought and will probably get attacked by a goose one day. We can\'t fault you for a silly quirk, or the even sillier pictures you take',
     'Bald': 'You\'re in a rough era, and that\'s okay! It may seem like nothing\'s going for you right now, but it will change! Your hair doesn\'t loook THAT bad, I swear!',
     'Baby': 'A baby Sim Ho is a sweet and naive Sim Ho. You probably have a lot to figure out, or are like under the age of 22. Either way, you are a huge cutie!!!'
   };
 
-  // Quiz Questions and their scoring logic
+  // --- Quiz Questions ---
   const quizQuestions = [
     {
       question: "What's your ideal way to spend a Saturday morning?",
       options: [
         { text: "Diving deep into a new coding project or troubleshooting a tricky bug.", points: { 'Coder God': 3, 'Bald': 3 } },
         { text: "Hitting the trails for a long hike, exploring new paths in nature.", points: { 'Hiker/Adventurist': 3 } },
-        { text: "Sleeping in, cuddling with the cat, or playing a video game.", points: { 'Lazy': 3, 'Cat Dad': 2 } },
+        { text: "Sleeping in, cuddling with the cat, or playing a video game.", points: { 'Lazy': 2, 'Cat Dad': 3 } },
         { text: "Spending the day with my beautiful wife, taking a walk and chasing ducks.", points: { 'Bird Watcher': 3, 'Holiday Edition': 2 } }
       ]
     },
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       question: "Which meal best describes your current food mood?",
       options: [
         { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 2, 'Bald': 1 } },
-        { text: "Donkatsu", points: { 'Lazy': 3, 'Cat Dad': 2 } },
+        { text: "Donkatsu", points: { 'Lazy': 2, 'Cat Dad': 2 } },
         { text: "McDonalds", points: { 'Coder God': 2 } },
         { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Holiday Edition': 2 } }
       ]
@@ -92,22 +92,22 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "\"Efficiency is key,\" or \"How can I optimize this?\"", points: { 'Coder God': 3, 'Bald': 2 } },
         { text: "\"Why do it today if you can do it tomorrow?\" or \"Let's just chill.\"", points: { 'Lazy': 3 } },
         { text: "\"Adventure awaits!\" or \"Let's explore that!\"", points: { 'Hiker/Adventurist': 3 } },
-        { text: "\"I must go as close to that bird as possible!\"", points: { 'Bird Watcher': 3 } },
+        { text: "\"I must go as close to that bird as possible!\"", points: { 'Bird Watcher': 3, 'Cat Dad': 1 } },
         { text: "\"I keep changing my mind about what I want to do\"", points: { 'Baby': 3 } },
         { text: "*white noise*", points: { 'Holiday Edition': 3 } }
       ]
     }
   ];
 
-  // Tie-breaker priority (order matters for ties)
+  // --- Tie-breaker Priority ---
   const tieBreakerOrder = [
     'Holiday Edition', 'Coder God', 'Hiker/Adventurist', 'Lazy', 'Cat Dad', 'Bird Watcher', 'Bald', 'Baby'
   ];
 
-  // Placeholder for your personalized birthday message
+  // --- Birthday Message ---
   const birthdayMessage = "~happy bday to my cutie husband. I thought this was funnier than sending you a card or something. ultimately, i love every version of you. see ya soon~";
 
-  // Function to initialize scores
+  // --- Score Initialization ---
   function initializeScores() {
     scores = {};
     Object.keys(simHoArchetypes).forEach(type => {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Function to display a specific screen
+  // --- Screen Display ---
   function showScreen(screenId) {
     startScreen.classList.add('hidden');
     quizScreen.classList.add('hidden');
@@ -123,18 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingScreen.classList.add('hidden');
 
     document.getElementById(screenId).classList.remove('hidden');
-    document.getElementById(screenId).classList.add('flex'); // Ensure flex display for proper centering
+    document.getElementById(screenId).classList.add('flex');
   }
 
-  // Function to render the current question
+  // --- Render Question ---
   function renderQuestion() {
     if (currentQuestionIndex < quizQuestions.length) {
       showScreen('quiz-screen');
       const questionData = quizQuestions[currentQuestionIndex];
       questionText.textContent = questionData.question;
-      optionsContainer.innerHTML = ''; // Clear previous options
+      optionsContainer.innerHTML = '';
 
-      // Update progress bar
       const progress = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
       progressBar.style.width = `${progress}%`;
       questionCount.textContent = `Question ${currentQuestionIndex + 1} of ${quizQuestions.length}`;
@@ -147,37 +146,33 @@ document.addEventListener('DOMContentLoaded', () => {
         optionsContainer.appendChild(button);
       });
     } else {
-      // All questions answered, show loading then results
       showScreen('loading-screen');
-      setTimeout(showResult, 2000); // Simulate calculation time
+      setTimeout(showResult, 2000);
     }
   }
 
-  // Function to handle answer selection
+  // --- Handle Answer ---
   function handleAnswer(selectedOption) {
-    // Apply points to scores
     for (const type in selectedOption.points) {
       if (scores.hasOwnProperty(type)) {
         scores[type] += selectedOption.points[type];
       }
     }
     currentQuestionIndex++;
-    renderQuestion(); // Move to the next question
+    renderQuestion();
   }
 
-  // Function to calculate and display the final result
+  // --- Show Result ---
   function showResult() {
     showScreen('result-screen');
     let maxScore = -1;
     let resultType = '';
 
-    // Find the highest score
     for (const type in scores) {
       if (scores[type] > maxScore) {
         maxScore = scores[type];
         resultType = type;
       } else if (scores[type] === maxScore) {
-        // Handle ties using the tieBreakerOrder
         const currentPriority = tieBreakerOrder.indexOf(resultType);
         const newPriority = tieBreakerOrder.indexOf(type);
         if (newPriority < currentPriority) {
@@ -188,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     resultTitle.textContent = `${resultType} Sim Ho!`;
 
-    // Set result image
     const resultImageElem = document.getElementById('result-image');
     const imageMap = {
       'Coder God': 'god.jpeg',
@@ -205,22 +199,21 @@ document.addEventListener('DOMContentLoaded', () => {
     resultImageElem.alt = `${resultType} Sim Ho`;
 
     resultDescription.textContent = simHoArchetypes[resultType];
-    birthdayMessageElem.textContent = birthdayMessage; // Set the actual birthday message
+    birthdayMessageElem.textContent = birthdayMessage;
   }
 
-  // Event Listeners
+  // --- Event Listeners ---
   startQuizBtn.addEventListener('click', () => {
-    initializeScores(); // Reset scores for a new game
-    currentQuestionIndex = 0; // Start from the first question
-    renderQuestion(); // Display the first question
+    initializeScores();
+    currentQuestionIndex = 0;
+    renderQuestion();
   });
 
   retakeQuizBtn.addEventListener('click', () => {
     initializeScores();
     currentQuestionIndex = 0;
-    renderQuestion(); // Go back to the first question
+    renderQuestion();
   });
 
-  // Initial display: Show the start screen
   showScreen('start-screen');
 });

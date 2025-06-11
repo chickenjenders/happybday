@@ -1,6 +1,5 @@
 body {
-  font-family: "Andale Mono", monospace; /* Changed font to Andale Mono */
-  /* Clean gradient with greens, blues, and creams - boyish birthday vibes */
+  font-family: "Andale Mono", monospace;
   background: linear-gradient(135deg, #e8f5e8, #e0f2f7, #f8f8f6);
   display: flex;
   justify-content: center;
@@ -9,7 +8,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  color: #2a3031; /* Dark gray for text */
+  color: #2a3031;
 }
 
 .result-img {
@@ -17,7 +16,7 @@ body {
   max-width: 800px;
 }
 .container {
-  max-width: 400px; /* Slightly wider for better phone experience */
+  max-width: 400px;
   width: 100%;
   padding: 20px;
   text-align: center;
@@ -25,17 +24,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Full viewport height for better mobile experience */
+  min-height: 100vh;
 }
 .btn {
-  /* Fresh sage green for primary buttons - calm and boyish */
   background-color: #c8e6c9;
-  color: #2a3031; /* Dark gray text */
+  color: #2a3031;
   padding: 12px 28px;
-  border-radius: 50px; /* Very rounded, similar to reference buttons */
+  border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   border: none;
   display: inline-flex;
@@ -44,41 +42,37 @@ body {
   gap: 8px;
 }
 .btn:hover {
-  /* Slightly deeper sage green on hover */
   background-color: #53c557;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly more prominent hover shadow */
-  transform: translateY(-1px); /* Subtle hover effect */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 .option-btn {
-  /* Soft cream/off-white for options - clean and neutral */
   background-color: #f8f8f6;
-  color: #2a3031; /* Dark gray text */
+  color: #2a3031;
   padding: 15px 25px;
-  border-radius: 50px; /* Very rounded to match message style in reference */
-  border: none; /* No border for a cleaner, flatter look */
+  border-radius: 50px;
+  border: none;
   font-weight: 500;
   text-align: left;
   transition: all 0.2s ease;
   cursor: pointer;
   width: 100%;
   margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Simpler shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .option-btn:hover {
-  /* Light blue-grey on hover */
   background-color: #6dc1dc;
   transform: translateY(-1px);
 }
 .option-btn.selected {
-  /* Soft blue for selected option - birthday celebration feel */
   background-color: #b3e5fc;
-  border: none; /* Keep consistent no border */
-  box-shadow: 0 3px 8px rgba(179, 229, 252, 0.4); /* Shadow to indicate selection */
+  border: none;
+  box-shadow: 0 3px 8px rgba(179, 229, 252, 0.4);
   font-weight: 600;
 }
 .progress-bar-container {
   width: 100%;
-  background-color: #f0f0f0; /* Light grey background */
+  background-color: #f0f0f0;
   border-radius: 10px;
   height: 10px;
   margin-top: 20px;
@@ -87,7 +81,6 @@ body {
 .progress-bar {
   height: 100%;
   width: 0%;
-  /* Calming blue-green for progress - birthday energy */
   background-color: #81c784;
   border-radius: 10px;
   transition: width 0.3s ease-in-out;
@@ -95,7 +88,6 @@ body {
 /* Loading spinner */
 .spinner {
   border: 4px solid rgba(0, 0, 0, 0.1);
-  /* Soft blue for spinner - calm and friendly */
   border-left-color: #64b5f6;
   border-radius: 50%;
   width: 40px;
@@ -125,7 +117,6 @@ body {
   box-shadow: 0 4px 18px rgba(255, 179, 71, 0.1);
   position: relative;
   text-align: center;
-  /* Add a scalloped edge using a repeating linear-gradient background */
   background-image: repeating-linear-gradient(
     to bottom,
     #fff7e6 0px,
@@ -136,7 +127,6 @@ body {
   background-size: 100% 16px;
   background-repeat: repeat-x;
   background-position: top;
-  /* Optional: add a subtle shadow for depth */
 }
 
 .birthday-card::before,
