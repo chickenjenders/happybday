@@ -31,59 +31,59 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --- Quiz Questions ---
-  const quizQuestions = [
+ const quizQuestions = [
     {
       question: "What's your ideal way to spend a Saturday morning?",
       options: [
-        { text: "Diving deep into a new coding project or troubleshooting a tricky bug.", points: { 'Coder God': 3, 'Bald': 3 } },
-        { text: "Hitting the trails for a long hike, exploring new paths in nature.", points: { 'Hiker/Adventurist': 3 } },
-        { text: "Sleeping in, cuddling with the cat, or playing a video game.", points: { 'Lazy': 2, 'Cat Dad': 3 } },
-        { text: "Spending the day with my beautiful wife, taking a walk and chasing ducks.", points: { 'Bird Watcher': 3, 'Holiday Edition': 2 } }
+        { text: "Diving deep into a new coding project or troubleshooting a tricky bug.", points: { 'Coder God': 4 } },
+        { text: "Hitting the trails for a long hike, exploring new paths in nature.", points: { 'Hiker/Adventurist': 4 } },
+        { text: "Sleeping in, cuddling with the cat, or playing a video game.", points: { 'Lazy': 3, 'Cat Dad': 2 } },
+        { text: "Spending the day with my beautiful wife, taking a walk and chasing ducks.", points: { 'Bird Watcher': 3, 'Holiday Edition': 1 } }
       ]
     },
     {
       question: "Which look are you feeling most right now?",
       options: [
-        { text: "Something comfortable and casual, probably beige or cream, perfect for a day out.", points: { 'Lazy': 2, 'Cat Dad': 2 } },
+        { text: "Something comfortable and casual, probably beige or cream, perfect for a day out.", points: { 'Lazy': 3, 'Cat Dad': 1 } },
         { text: "Practical and sporty gear, ready for any outdoor adventure, rain or shine.", points: { 'Hiker/Adventurist': 3 } },
-        { text: "A simple, functional look, monochromatic or basic.", points: { 'Bald': 3, 'Coder God': 1 } },
-        { text: "A button down or sweater. Probably striped, pink or gray.", points: { 'Baby': 3 } }
+        { text: "A simple, functional look, monochromatic or basic.", points: { 'Bald': 4, 'Coder God': 2 } },
+        { text: "A button down or sweater. Probably striped, pink or gray.", points: { 'Baby': 3, 'Holiday Edition': 1 } }
       ]
     },
     {
       question: "Your go-to stress reliever is...",
       options: [
-        { text: "Systematically debugging complex code until the solution clicks perfectly.", points: { 'Coder God': 3 } },
-        { text: "Escaping into the great outdoors for a refreshing trek.", points: { 'Hiker/Adventurist': 2 } },
-        { text: "Doing nothing at home or playing video games.", points: { 'Cat Dad': 2, 'Lazy': 3 } },
-        { text: "Indulging in a very specific, perhaps obscure, hobby or interest that's uniquely *you*.", points: { 'Holiday Edition': 3, 'Cat Dad': 1 } }
+        { text: "Systematically debugging complex code until the solution clicks perfectly.", points: { 'Coder God': 4 } },
+        { text: "Escaping into the great outdoors for a refreshing trek.", points: { 'Hiker/Adventurist': 3, 'Bird Watcher': 1 } },
+        { text: "Doing nothing at home or gaming.", points: { 'Cat Dad': 3, 'Lazy': 2 } },
+        { text: "Indulging in a very specific, perhaps obscure, hobby or interest that's uniquely *you*.", points: { 'Holiday Edition': 4 } }
       ]
     },
     {
-      question: "When you think about your wife, what do you think is your most redeeming quality?",
+      question: "From the perspective of your wife, what do you think is your most redeeming quality?",
       options: [
-        { text: "Encouraging adventures and exercise together.", points: { 'Hiker/Adventurist': 2 } },
-        { text: "Planning dates like board game cafes and walks in the park.", points: { 'Baby': 3, 'Holiday Edition': 1 } },
-        { text: "Being able to do anything together, even if its rotting at home.", points: { 'Lazy': 2, 'Cat Dad': 3 } },
-        { text: "The amount of times I’ve helped her with her projects for school.", points: { 'Coder God': 2 } }
+        { text: "Encouraging adventures and exercise together.", points: { 'Hiker/Adventurist': 3 } },
+        { text: "Planning dates like board game cafes and walks in the park.", points: { 'Baby': 3, 'Holiday Edition': 2 } },
+        { text: "Being able to do anything together, even if its rotting at home.", points: { 'Lazy': 2, 'Cat Dad': 4 } },
+        { text: "The amount of times I’ve helped her with her projects for school.", points: { 'Coder God': 3, 'Bald': 1 } }
       ]
     },
     {
       question: "Pick only one movie to watch everyday for a month straight.",
       options: [
-        { text: "The Imitation Game", points: { 'Coder God': 3 } },
-        { text: "Nature documentary", points: { 'Bird Watcher': 2, 'Hiker/Adventurist': 1 } },
-        { text: "Megamind", points: { 'Lazy': 3, 'Cat Dad': 1 } },
-        { text: "Memoir of a Murderer (살인자의 기억법)", points: { 'Holiday Edition': 3 } }
+        { text: "The Imitation Game", points: { 'Coder God': 3, 'Bald': 1 } },
+        { text: "Nature documentary", points: { 'Bird Watcher': 3, 'Hiker/Adventurist': 2 } },
+        { text: "Megamind", points: { 'Lazy': 3, 'Baby': 2 } },
+        { text: "Memoir of a Murderer (살인자의 기억법)", points: { 'Holiday Edition': 4 } }
       ]
     },
     {
       question: "Which meal best describes your current food mood?",
       options: [
-        { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 2, 'Bald': 1 } },
-        { text: "Donkatsu", points: { 'Cat Dad': 2 } },
-        { text: "McDonalds", points: { 'Holiday Edition': 2, 'Lazy': 2, } },
-        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 3, 'Coder God': 2 } }
+        { text: "Healthy foods, Factor meals, protein shakes", points: { 'Hiker/Adventurist': 3, 'Coder God': 2 } },
+        { text: "Donkatsu", points: { 'Bald': 3, 'Cat Dad': 1 } },
+        { text: "McDonalds", points: { 'Holiday Edition': 3, 'Lazy': 1 } },
+        { text: "Kimchi Spam Fried Rice", points: { 'Baby': 2, 'Bird Watcher': 1 } }
       ]
     },
     {
@@ -92,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { text: "\"Efficiency is key,\" or \"How can I optimize this?\"", points: { 'Coder God': 3, 'Bald': 2 } },
         { text: "\"Why do it today if you can do it tomorrow?\" or \"Let's just chill.\"", points: { 'Lazy': 3 } },
         { text: "\"Adventure awaits!\" or \"Let's explore that!\"", points: { 'Hiker/Adventurist': 3 } },
-        { text: "\"I must go as close to that bird as possible!\"", points: { 'Bird Watcher': 3, 'Cat Dad': 1 } },
-        { text: "\"I keep changing my mind about what I want to do\"", points: { 'Baby': 3 } },
-        { text: "*white noise*", points: { 'Holiday Edition': 3 } }
+        { text: "\"I must go as close to that bird as possible!\"", points: { 'Bird Watcher': 4, 'Cat Dad': 1 } },
+        { text: "\"I keep changing my mind about what I want to do\"", points: { 'Baby': 4 } },
+        { text: "*white noise*", points: { 'Holiday Edition': 4 } }
       ]
     }
   ];
